@@ -1,9 +1,8 @@
 import { useState } from "react"
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
+import { Bars3Icon, XMarkIcon, ShoppingCartIcon,LanguageIcon } from "@heroicons/react/24/solid"
 import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/shared/ActionButton"
 import HText from "@/shared/HText"
 
 type Props = {
@@ -31,15 +30,21 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
 
                         {/* right side */}
                         {isAboveMediumScreens ? (
-                            <div className={`${flexBetween} gap-8 text-sm`}>
-                                <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page="About" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-
-                                <ActionButton setSelectedPage={setSelectedPage}>Buy Now</ActionButton>
+                            <div className={`${flexBetween} w-full`}>
+                                <div className={`${flexBetween} gap-8 text-sm`}>
+                                    <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page="About" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page="Products" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page="Features" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                </div>
+                            <div className={`${flexBetween} gap-8`}>
+                                <ShoppingCartIcon className="h-6 w-6 text-black" />
+                                <LanguageIcon className="h-6 w-6 text-black" />
                             </div>
+                        </div>
                         ) : (
-                            <button className="rounded-full bg-[#111B47] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                            <button className="rounded-full bg-black p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <Bars3Icon className="h-6 w-6 text-white" />
                             </button>
                         )}
@@ -61,6 +66,8 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                     <div className={`ml-[33%] flex flex-col gap-10 text-2xl`}>
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="About" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <Link page="Products" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <Link page="Features" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     </div>
                 </div>

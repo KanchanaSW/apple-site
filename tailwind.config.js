@@ -11,6 +11,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
+        aboutimage: "url('./assets/apple-3.png')",
       },
     },
     screens: {

@@ -6,9 +6,8 @@ import About from "@/scenes/about"
 import ContactUs from "@/scenes/contactUs"
 import Footer from "@/scenes/footer"
 import Home from "@/scenes/home"
-import About2 from "@/scenes/about2"
-import About3 from "@/scenes/about3"
-import About4 from "@/scenes/about4"
+import Products from "@/scenes/products"
+import Features from "@/scenes/features"
 
 function App() {
 
@@ -32,9 +31,9 @@ function App() {
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
       <Home setSelectedPage={setSelectedPage} />
       <About setSelectedPage={setSelectedPage} />
-      <About2 setSelectedPage={setSelectedPage} />
-      <About3 setSelectedPage={setSelectedPage} />
-      <About4 setSelectedPage={setSelectedPage} />
+      <Products setSelectedPage={setSelectedPage} />
+
+      <Features setSelectedPage={setSelectedPage} />
 
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer setSelectedPage={setSelectedPage}/>
