@@ -8,12 +8,12 @@ type Props = {
 
 const Footer = ({setSelectedPage}: Props) => {
   return (
-    <footer className='bg-[#929ECC] py-16'>
+    <footer className='py-16'>
         <div className='justify-content mx-auto w-5/6 gap-16 md:flex'>
             <div className='mt-16 basis-1/2 md:mt-0'>
-                <HText>Website Name</HText>
+                <HText>Apple.</HText>
                 <p className='my-5 '>
-                    Complete your business with website template.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </p>
                 <p>© 2023 KW. All Rights Reserved.</p>
             </div>

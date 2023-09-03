@@ -12,12 +12,12 @@ const Features = ({ setSelectedPage }: Props) => {
   const isAboveSmallScreens = useMediaQuery("(min-width:768px")
 
   return (
-    <section id="features" className="gap-16 md:h-full md:pb-0">
+    <section id="features" className="mx-auto w-5/6 pt-24 pb-32 md:h-full">
       <div className='md:h-5/6 mt-36'>
                 {/* main header  and images*/}
                 <motion.div
                     className='md:flex mx-auto w-5/6 items-center justify-center '
-                    onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+                    onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
                 >
                     {/* main header */}
                     <div className='z-10'>

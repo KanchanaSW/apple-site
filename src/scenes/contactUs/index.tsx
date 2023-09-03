@@ -1,7 +1,7 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
-import ActionButton from "@/shared/ActionButton";
+import Image from "@/assets/apple-2.jpg"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -10,13 +10,13 @@ type Props = {
 const ContactUs = ({ setSelectedPage }: Props) => {
 
   return (
-    <section id="contact" className="mx-auto h-3/4 flex items-center justify-center pt-24 pb-32 bg-[#E7ECFF]">
+    <section id="contact" className="mx-auto flex items-center pt-24 pb-32 md:h-full bg-gray-950">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
       >
         {/* HEADER */}
         <motion.div
-          className="text-center"
+          className="mx-auto w-5/6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -27,15 +27,13 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-4xl">A Price To Suit Everyone</span> 
+            <span className="text-4xl text-white">Review</span> 
           </HText>
-          <p className="my-5 md:mx-96">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consectetur ullam dignissimos reprehenderit quis natus, dolor est autem hic beatae fuga! Similique non iste animi quam cumque voluptates excepturi modi.
-          </p>
         </motion.div>
 
-        <motion.div
-            className="md:mt-12 text-center"
+        <div className="mt-10 justify-between gap-8 md:flex mx-auto w-5/6">
+          <motion.div
+            className="mt-10 basis-2/5 md:mt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -45,14 +43,29 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-          <HText>
-              <span className="text-7xl">$50</span> 
-          </HText>
+            <img src={Image} alt="image-review" className="rounded-lg"/>
+          </motion.div>
 
-          <p className="mt-12 mb-4 text-[#5D6970]">See, One price. Simple.</p>
+          <motion.div
+            className="relative mt-16 basis-3/5 md:mt-0 flex flex-col justify-center items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="text-white text-center">
+              <HText>
+                <span>John Nolan</span>
+              </HText>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum est inventore aperiam magni perferendis quisquam nam porro debitis sapiente dolor assumenda praesentium, nesciunt pariatur, delectus fugiat? Libero, exercitationem voluptates! Asperiores.</p>
 
-          <ActionButton setSelectedPage={setSelectedPage}>Purchase Now</ActionButton>
-        </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );
