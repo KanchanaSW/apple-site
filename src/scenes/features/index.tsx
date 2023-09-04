@@ -23,7 +23,7 @@ const Features = ({ setSelectedPage }: Props) => {
                     <div className='z-10'>
                         {/* headings */}
                         <motion.div
-                            className=' text-center md:mx-32'
+                            className=' text-center md:mx-32 mb-28'
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}

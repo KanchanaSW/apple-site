@@ -1,6 +1,9 @@
 import { SelectedPage } from '@/shared/types'
 import ActionButton from '@/shared/ActionButton'
-import Ipad from '@/assets/apple-1.jpg'
+import IDisplay from '@/assets/Apple Displays.png'
+import IMac from '@/assets/iMac.png'
+import Macbook from '@/assets/Macbook Pro.png'
+
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 import HText from '@/shared/HText'
@@ -17,10 +20,10 @@ const Home = ({ setSelectedPage }: Props) => {
             id='home'
             className='gap-16 md:h-full md:pb-0'
         >
-            <div className='md:h-5/6 mt-36'>
+            <div className='h-5/6 md:flex flex-col justify-center mt-28'>
                 {/* main header  and images*/}
                 <motion.div
-                    className='md:flex mx-auto w-5/6 items-center justify-center '
+                    className='mx-auto w-5/6'
                     onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
                 >
                     {/* main header */}
@@ -44,7 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
                         {/* actions */}
                         <motion.div
-                            className='mt-8 flex justify-center gap-8'
+                            className='my-16 flex justify-center gap-8'
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}
@@ -65,7 +68,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
                 {isAboveSmallScreens &&
                     <motion.div
-                        className="mt-10 md:mt-0"
+                        className="mt-10"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
@@ -77,17 +80,17 @@ const Home = ({ setSelectedPage }: Props) => {
                     >
                         <div className='mt-10 flex items-center justify-evenly gap-5'>
                             <div className='flex flex-col'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                                <img src={IMac} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>
                             <div className='flex flex-col mt-16'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                                <img src={Macbook} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>
                             <div className='flex flex-col'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                                <img src={IDisplay} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>
@@ -110,17 +113,17 @@ const Home = ({ setSelectedPage }: Props) => {
                     >
                         <div className='mt-10 flex flex-col gap-5'>
                             <div className='flex flex-col justify-center items-center'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                            <img src={IMac} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>
                             <div className='flex flex-col justify-center items-center'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                            <img src={Macbook} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>
                             <div className='flex flex-col justify-center items-center'>
-                                <img src={Ipad} alt="icon-1" width={200} height={350} />
+                            <img src={IDisplay} alt="icon-1" width={300} height={450} />
                                 <p className='text-center'>ipad</p>
                                 <span className='font-bold text-center text-xl'>$999</span>
                             </div>

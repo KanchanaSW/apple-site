@@ -1,6 +1,6 @@
 import { SelectedPage } from '@/shared/types';
 import { motion } from "framer-motion"
-import AboutGraphic from '@/assets/apple-3.jpg'
+import AboutGraphic from '@/assets/iMac 2021 - Purple.png'
 import HText from '@/shared/HText';
 
 type Props = {
@@ -28,7 +28,7 @@ const About = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className='relative'>
-              <div className='bg-gray-200 p-10 rounded-xl'>
+              <div className='bg-gray-200 p-14 rounded-xl'>
                 <img
                   className="w-full"
                   alt="contact-us-page-graphic"
@@ -53,6 +53,7 @@ const About = ({ setSelectedPage }: Props) => {
             <HText>
               <span className='text-4xl text-white'>About us</span>
             </HText>
+            <p className='mt-3 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nam optio hic necessitatibus atque alias sed voluptates quasi, tempora repellat omnis enim veritatis explicabo ea illo adipisci libero possimus voluptatibus.</p>
             <p className='mt-3 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nam optio hic necessitatibus atque alias sed voluptates quasi, tempora repellat omnis enim veritatis explicabo ea illo adipisci libero possimus voluptatibus.</p>
             <p className='mt-3 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nam optio hic necessitatibus atque alias sed voluptates quasi, tempora repellat omnis enim veritatis explicabo ea illo adipisci libero possimus voluptatibus.</p>
 
